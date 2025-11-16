@@ -1,0 +1,278 @@
+body {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  min-height: 100vh;
+  background: linear-gradient(
+    0deg,
+    rgb(249, 52, 27) 0%,
+    rgb(255, 190, 152) 100%
+  );
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  flex: 1;
+}
+
+.wrapper {
+  width: 60vw;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  box-shadow:
+    15px 15px 20px rgba(0, 0, 0, 0.5),
+    15px 15px 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  display: inline-block;
+  color: rgb(21, 60, 109);
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid rgb(21, 60, 109);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  margin-left: 0; /* Ensure no left margin */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  place-self: center;
+  width: 100%;
+}
+/* ****************************************************************************
+FORM ACCESSORIES
+******************************************************************************/
+/* 'borrowed' */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+#password-info {
+  font-size: 0.7rem;
+  font-style: italic;
+  font-weight: 500;
+}
+/* ****************************************************************************
+FORM 'HEADERS'
+******************************************************************************/
+fieldset {
+  border: none;
+  border-top: 1px solid black;
+  width: 100%;
+  padding: 0.5rem 0;
+  margin: 0; /* Remove any left margin */
+  padding-left: 0; /* Ensure no left padding */
+  gap: 0;
+}
+
+.header-bubbles {
+  background-color: rgb(21, 60, 109);
+  color: white;
+  font-size: small;
+  border-radius: 50%;
+  padding: 0.4rem 0.75rem;
+}
+
+.outer-legend {
+  display: flex;
+  flex-direction: row;
+  font-size: large;
+  padding: 0;
+  margin: 0; /* Add this */
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.outer-legend::before,
+.outer-legend::after {
+  content: "";
+  flex: 10;
+  height: 1px;
+  background-color: #000; /* Color of the line */
+}
+
+.outer-legend::before {
+  width: 2rem;
+}
+/* ****************************************************************************
+FORM ELEMENTS
+******************************************************************************/
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  background-color: #e8eeef;
+  font-size: small;
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 3px;
+  margin: 0.2rem 0;
+  box-sizing: border-box;
+  display: block;
+  margin-left: 0; /* Ensure no left margin */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border: 2px solid #0066ff;
+  outline: none;
+}
+
+legend {
+  margin: 0; /* Remove default margin from legend */
+  font-weight: bold;
+  font-size: 16px;
+}
+
+label[for="referrer-select"],
+label[for="comments"] {
+  margin-bottom: -0.25rem;
+}
+
+#experience {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  column-gap: 1rem;
+}
+
+#other {
+  display: flex;
+  flex-direction: column;
+}
+
+#referrer-select {
+  margin-bottom: 0.5rem;
+}
+
+#comments-field {
+  width: 100%;
+  height: 120px; /* Increase height to fill more space */
+  resize: vertical; /* Allow user to resize vertically only */
+  padding: 10px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+/* ****************************************************************************
+BUTTONS
+******************************************************************************/
+#button-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-items: center;
+}
+
+button {
+  font-size: large;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+#submit {
+  background-color: rgb(21, 60, 109);
+  color: white;
+}
+
+#clear-form {
+  margin: 2rem 0;
+  color: red;
+  border: 2px solid #e8eeef;
+}
+/* ****************************************************************************
+CHECKBOXES
+******************************************************************************/
+.checkboxes {
+  border-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 0.25rem;
+  margin: 0;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #333;
+  border-radius: 2px;
+  background-color: white;
+  cursor: pointer;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+input[type="checkbox"]:checked {
+  background-color: white;
+  position: relative;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✔";
+  position: absolute;
+  color: #333;
+  font-size: 14px;
+  font-weight: bold;
+  top: -4px;
+  left: 2px;
+}
+/* ****************************************************************************
+RADIOS
+******************************************************************************/
+input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #333;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #333;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+input[type="radio"]:checked {
+  background: radial-gradient(circle, #333 35%, white 35%);
+}
+/* ****************************************************************************
+FOOTER
+******************************************************************************/
+footer {
+  width: 100%;
+  display: block;
+  text-align: right;
+  padding: 20px;
+  font-size: 1rem;
+}

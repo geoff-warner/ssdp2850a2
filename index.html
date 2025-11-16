@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2850 Assignment 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <script src="/scripts/script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <div class="wrapper">
+        <h1>Signup</h1>
+        <form action="post" id="form-body">
+          <fieldset id="fieldset-account-info">
+            <legend class="outer-legend">
+              <span class="header-bubbles">1</span>Account Info
+            </legend>
+            <label for="fullname" class="visually-hidden">Full name</label>
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="Full name..."
+              required
+            />
+
+            <label for="email" class="visually-hidden">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email Address..."
+              autocomplete="off"
+              required
+            />
+
+            <label for="password" class="visually-hidden">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password..."
+              required
+              pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{12,}"
+              minlength="12"
+            />
+            <p id="password-info">
+              Minimum 12 Characters. <br />Must include uppercase, lowercase,
+              number and symbol.
+            </p>
+          </fieldset>
+
+          <fieldset id="fieldset-dev-skills">
+            <legend class="outer-legend">
+              <span class="header-bubbles">2</span>Dev Skills
+            </legend>
+
+            <fieldset id="core-languages" class="checkboxes">
+              <legend>Core Languages</legend>
+              <label
+                ><input type="checkbox" name="languages[]" value="html" />
+                HTML</label
+              >
+              <label
+                ><input type="checkbox" name="languages[]" value="css" />
+                CSS</label
+              >
+              <label
+                ><input type="checkbox" name="languages[]" value="js" />
+                JavaScript</label
+              >
+              <label
+                ><input type="checkbox" name="languages[]" value="php" />
+                PHP</label
+              >
+              <label
+                ><input type="checkbox" name="languages[]" value="csharp" />
+                C#</label
+              >
+              <label
+                ><input type="checkbox" name="languages[]" value="kotlin" />
+                Kotlin</label
+              >
+            </fieldset>
+
+            <fieldset id="libraries-frameworks" class="checkboxes">
+              <legend>Libraries / Frameworks</legend>
+              <label
+                ><input type="checkbox" name="frameworks[]" value="react" />
+                React</label
+              >
+              <label
+                ><input type="checkbox" name="frameworks[]" value="angular" />
+                Angular</label
+              >
+              <label
+                ><input type="checkbox" name="frameworks[]" value="vue" />
+                Vue</label
+              >
+            </fieldset>
+
+            <fieldset id="devops" class="checkboxes">
+              <legend>Dev Ops</legend>
+              <label
+                ><input type="checkbox" name="devops[]" value="git" />
+                Git</label
+              >
+              <label
+                ><input type="checkbox" name="devops[]" value="gulp" />
+                Gulp</label
+              >
+              <label
+                ><input type="checkbox" name="devops[]" value="docker" />
+                Docker</label
+              >
+            </fieldset>
+          </fieldset>
+
+          <fieldset>
+            <legend class="outer-legend">
+              <span class="header-bubbles">3</span>Experience
+            </legend>
+            <fieldset id="experience" class="checkboxes">
+              <label
+                ><input type="radio" name="experience" value="beginner" />
+                Beginner</label
+              >
+              <label
+                ><input type="radio" name="experience" value="intermediate" />
+                Intermediate</label
+              >
+              <label
+                ><input type="radio" name="experience" value="advanced" />
+                Advanced</label
+              >
+            </fieldset>
+          </fieldset>
+          <fieldset id="other">
+            <legend class="outer-legend">
+              <span class="header-bubbles">4</span>Other
+            </legend>
+            <label for="referrer-select">How did you hear about us?</label>
+            <select name="referrer" id="referrer-select">
+              <option value="">Please Select...</option>
+              <optgroup label="Person">
+                <option value="friend">Friend</option>
+                <option value="family">Family</option>
+                <option value="colleague">Colleague</option>
+              </optgroup>
+              <optgroup label="Media">
+                <option value="internet">Internet</option>
+                <option value="radio">Radio</option>
+                <option value="tv">TV</option>
+                <option value="newspaper">Newspaper</option>
+              </optgroup>
+              <optgroup label="Other">
+                <option value="magic">Magic!</option>
+                <option value="other">Other...</option>
+              </optgroup>
+            </select>
+            <!-- hidden field here -->
+            <div id="hidden-field" class="visually-hidden">
+              <label for="details-please">Details, please...</label>
+              <input type="text" name="details-please" placeholder="Do tell!" />
+            </div>
+            <!-- hidden field here -->
+            <label for="comments">Comments</label>
+            <textarea name="comments" id="comments-field"></textarea>
+          </fieldset>
+          <div id="button-container">
+            <button id="submit">Submit</button>
+            <button type="reset" id="clear-form" onclick="setHidden()">
+              Clear Form
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div>&copy; <span id="year-display"></span> Joshua Solomon</div>
+    </footer>
+  </body>
+</html>
