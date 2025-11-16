@@ -1,0 +1,6 @@
+I used Claude for a lot of troubleshooting throughout, mostly with CSS formatting. 
+
+While there were a lot of helpful moments, I can't say it was without frustration. 
+There were many instances where AI just...didn't work. Suggestions ranged from ridiculous to very helpful.
+
+Overall, definitely a net-positive
