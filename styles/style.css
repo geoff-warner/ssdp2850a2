@@ -4,11 +4,24 @@ body {
   font-weight: 400;
   font-style: normal;
   min-height: 100vh;
-  background: linear-gradient(
-    0deg,
-    rgb(249, 52, 27) 0%,
-    rgb(255, 190, 152) 100%
-  );
+
+  background:
+    radial-gradient(
+      ellipse at 0% 100%,
+      rgba(200, 100, 40, 0.5) 0%,
+      rgba(160, 60, 40, 0.2) 15%,
+      transparent 40%
+    ),
+    linear-gradient(
+      180deg,
+      rgb(10, 8, 30) 0%,
+      rgb(25, 10, 50) 20%,
+      rgb(60, 15, 80) 40%,
+      rgb(100, 35, 75) 60%,
+      rgb(140, 60, 50) 80%,
+      rgb(160, 90, 60) 100%
+    );
+  background-attachment: fixed;
 }
 
 main {
@@ -20,7 +33,7 @@ main {
 
 .wrapper {
   width: 60vw;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.75); /* 75% opaque */
   padding: 2rem;
   border-radius: 1rem;
   margin-top: 2rem;
@@ -31,9 +44,9 @@ main {
 
 h1 {
   display: inline-block;
-  color: rgb(21, 60, 109);
+  color: rgb(60, 15, 80);
   padding-bottom: 0.25rem;
-  border-bottom: 2px solid rgb(21, 60, 109);
+  border-bottom: 2px solid rgb(60, 15, 80);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   box-shadow: 0 2px rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
@@ -81,7 +94,7 @@ fieldset {
 }
 
 .header-bubbles {
-  background-color: rgb(21, 60, 109);
+  background-color: rgba(60, 15, 80, 0.8);
   color: white;
   font-size: small;
   border-radius: 50%;
@@ -118,7 +131,7 @@ input[type="email"],
 input[type="password"],
 textarea,
 select {
-  background-color: #e8eeef;
+  background-color: rgba(232, 238, 239, 0.5);
   font-size: small;
   width: 100%;
   padding: 0.5rem;
@@ -134,7 +147,7 @@ input[type="email"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 2px solid #0066ff;
+  border: 2px solid #d3b222;
   outline: none;
 }
 
@@ -191,14 +204,14 @@ button {
 }
 
 #submit {
-  background-color: rgb(21, 60, 109);
+  background-color: rgba(60, 15, 80, 0.75);
   color: white;
 }
 
 #clear-form {
   margin: 2rem 0;
-  color: red;
-  border: 2px solid #e8eeef;
+  color: rgba(60, 15, 80, 0.75);
+  border: 2px solid rgba(60, 15, 80, 0.75);
 }
 /* ****************************************************************************
 CHECKBOXES
@@ -217,14 +230,14 @@ input[type="checkbox"] {
   height: 18px;
   border: 1px solid #333;
   border-radius: 2px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
   cursor: pointer;
   margin-right: 8px;
   vertical-align: middle;
 }
 
 input[type="checkbox"]:checked {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
   position: relative;
 }
 
@@ -245,7 +258,7 @@ input[type="radio"] {
   width: 18px;
   height: 18px;
   border: 2px solid #333;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   cursor: pointer;
   margin-right: 8px;
@@ -257,7 +270,7 @@ input[type="radio"] {
   width: 18px;
   height: 18px;
   border: 2px solid #333;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   cursor: pointer;
   margin-right: 8px;
